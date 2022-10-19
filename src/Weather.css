@@ -1,0 +1,13 @@
+.Weather {
+  border: 1px solid #dadde1;
+  padding: 10px;
+  border-radius: 5px;
+}
+.Weather ul {
+  list-style: none;
+  font-size: 10px;
+  display: contents;
+}
+.Weather .degrees {
+  font-size: 50px;
+}
