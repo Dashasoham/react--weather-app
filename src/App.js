@@ -8,6 +8,7 @@ function App() {
         <h1>Weather App </h1>
         <Weather />
       </header>
+      <footer>Coded by Daria Korniienko</footer>
     </div>
   );
 }

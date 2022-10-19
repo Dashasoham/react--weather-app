@@ -6,8 +6,15 @@
 .Weather ul {
   list-style: none;
   font-size: 10px;
+  font-weight: 300;
+  line-height: 15px;
   display: contents;
 }
 .Weather .degrees {
   font-size: 50px;
+}
+.Weather .units {
+  position: relative;
+  line-height: 1;
+  top: -25px;
 }
