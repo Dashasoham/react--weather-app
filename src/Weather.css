@@ -5,8 +5,8 @@
 }
 .Weather ul {
   list-style: none;
-  font-size: 10px;
-  font-weight: 300;
+  font-size: 12px;
+  font-weight: 350;
   line-height: 15px;
   display: contents;
 }
@@ -17,4 +17,19 @@
   position: relative;
   line-height: 1;
   top: -25px;
+}
+
+.Weather .icon {
+  margin-top: -15px;
+}
+.Weather .cityDisplay {
+  padding: 15px 0px;
+}
+
+.Weather .date {
+  text-transform: uppercase;
+}
+.Weather .description {
+  padding-top: 10px;
+  font-size: 15px;
 }
