@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
-import './Weather.css';
 import AppInfo from './AppInfo';
 import axios from 'axios';
+import './Weather.css';
 
-export default function Weather() {
+export default function Weather(props) {
   let [weather, setWeather] = useState(false);
   let [loaded, setLoaded] = useState(false);
   let [city, setCity] = useState(null);
-  let [message, setMessage] = useState(null);
 
   function handleCity(response) {
     setLoaded(true);
@@ -20,12 +19,10 @@ export default function Weather() {
       icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
       city: response.data.name,
     });
-    setMessage(city);
   }
 
   function handleSubmit(event) {
     event.preventDefault();
-
     let apiKey = '7d2f7439094688bc9a2723b3273f8711';
     let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios.get(url).then(handleCity);
