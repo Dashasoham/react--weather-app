@@ -1,5 +1,6 @@
 import React from 'react';
 import CurrentDate from './CurrentDate';
+import Icon from './Icon';
 
 export default function AppInfo(props) {
   return (
@@ -7,7 +8,7 @@ export default function AppInfo(props) {
       <h2 className="cityDisplay">{props.data.city}</h2>
       <div className="row">
         <div className=" icon col-2">
-          <img src={props.data.icon} alt="weather-icon" />
+          <Icon code={props.data.icon} size={52} />
         </div>
         <div className="col-2">
           {' '}

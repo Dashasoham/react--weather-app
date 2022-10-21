@@ -19,8 +19,8 @@
   top: -25px;
 }
 
-.Weather .icon {
-  margin-top: -15px;
+.Weather canvas {
+  margin: 10px auto;
 }
 .Weather .cityDisplay {
   padding: 15px 0px;

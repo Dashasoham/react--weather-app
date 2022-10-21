@@ -6,7 +6,7 @@ import './Weather.css';
 export default function Weather(props) {
   let [weather, setWeather] = useState(false);
   let [loaded, setLoaded] = useState(false);
-  let [city, setCity] = useState(null);
+  let [city, setCity] = useState(props.defaultCity);
 
   function handleCity(response) {
     setLoaded(true);
@@ -16,16 +16,20 @@ export default function Weather(props) {
       humidity: response.data.main.humidity,
       wind: response.data.wind.speed,
       date: new Date(response.data.dt * 1000),
-      icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
+      icon: response.data.weather[0].icon,
       city: response.data.name,
     });
   }
 
-  function handleSubmit(event) {
-    event.preventDefault();
+  function search() {
     let apiKey = '7d2f7439094688bc9a2723b3273f8711';
     let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios.get(url).then(handleCity);
+  }
+
+  function handleSubmit(event) {
+    event.preventDefault();
+    search();
   }
 
   function updateCity(event) {
@@ -65,6 +69,11 @@ export default function Weather(props) {
       </div>
     );
   } else {
-    return <h1 className="Weather">{form}</h1>;
+    search();
+    return (
+      <div>
+        <h1 className="Weather">{form}</h1>
+      </div>
+    );
   }
 }
