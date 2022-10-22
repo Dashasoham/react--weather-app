@@ -1,6 +1,7 @@
 import React from 'react';
 import CurrentDate from './CurrentDate';
 import Icon from './Icon';
+import Degrees from './Degrees';
 
 export default function AppInfo(props) {
   return (
@@ -10,10 +11,9 @@ export default function AppInfo(props) {
         <div className=" icon col-2">
           <Icon code={props.data.icon} size={52} />
         </div>
-        <div className="col-2">
+        <div className="col-3">
           {' '}
-          <span className="degrees">{Math.round(props.data.temperature)}</span>
-          <span className="units">°C</span>
+          <Degrees celsius={props.data.temperature} />
         </div>
         <div className="col-3">
           <ul>
@@ -21,7 +21,7 @@ export default function AppInfo(props) {
             <li>Wind: {props.data.wind} km/h</li>
           </ul>
         </div>
-        <div className="col-2"></div>
+        <div className="col-1"></div>
         <div className="col-3">
           <div className="date">
             <CurrentDate date={props.data.date} />
