@@ -23,7 +23,7 @@ export default function Degrees(props) {
         <span className="degrees">{Math.round(props.celsius)}</span>
         <span className="units">
           °C |{' '}
-          <a href="/" onClick={convertF}>
+          <a href="/" onClick={convertF} className="active">
             F°
           </a>
         </span>
@@ -35,7 +35,7 @@ export default function Degrees(props) {
         {' '}
         <span className="degrees">{Math.round(fahrenheit())}</span>
         <span className="units">
-          <a href="/" onClick={convertC}>
+          <a href="/" onClick={convertC} className="active">
             °C |{' '}
           </a>
           F°

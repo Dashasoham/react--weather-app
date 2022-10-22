@@ -1,7 +1,20 @@
 .Weather {
-  border: 1px solid #dadde1;
+  border: 1px solid #47a2bb;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset,
+    0px 0px 8px rgb(60, 165, 170);
   padding: 10px;
   border-radius: 5px;
+}
+.Weather .btn {
+  background-color: #47a2bb;
+}
+.Weather .btn:hover {
+  background-color: #2cb9c0;
+}
+.Weather .form-control:focus {
+  border-color: #47a2bb;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset,
+    0px 0px 8px rgb(84, 186, 192);
 }
 .Weather ul {
   list-style: none;
@@ -21,12 +34,20 @@
   line-height: 1;
   top: -25px;
 }
+.Weather .units .active {
+  color: #47a2bb;
+}
 
 .Weather canvas {
   margin: 10px auto;
 }
 .Weather .cityDisplay {
   padding: 15px 0px;
+}
+.Weather .country {
+  font-size: 16px;
+  position: relative;
+  top: -10px;
 }
 
 .Weather .date {

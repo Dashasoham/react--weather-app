@@ -6,7 +6,9 @@ import Degrees from './Degrees';
 export default function AppInfo(props) {
   return (
     <div className="container">
-      <h2 className="cityDisplay">{props.data.city}</h2>
+      <h2 className="cityDisplay">
+        {props.data.city},<span className="country">{props.data.country}</span>
+      </h2>
       <div className="row">
         <div className=" icon col-2">
           <Icon code={props.data.icon} size={52} />

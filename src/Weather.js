@@ -18,7 +18,9 @@ export default function Weather(props) {
       date: new Date(response.data.dt * 1000),
       icon: response.data.weather[0].icon,
       city: response.data.name,
+      country: response.data.sys.country,
     });
+    console.log(response.data);
   }
 
   function search() {
@@ -51,11 +53,7 @@ export default function Weather(props) {
           />
         </div>
         <div className="col-3">
-          <input
-            type="submit"
-            value="Search"
-            className="btn btn-primary w-100"
-          />{' '}
+          <input type="submit" value="Search" className="btn  w-100" />{' '}
         </div>
       </div>
     </form>
