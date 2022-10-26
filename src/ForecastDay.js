@@ -20,13 +20,12 @@ export default function ForecastDay(props) {
 
   return (
     <div>
-      <div className="col">
-        <div> {day()}</div>
-        <img
-          src={props.dailyData.condition.icon_url}
-          alt={props.dailyData.condition.description}
-        />
-      </div>
+      <div> {day()}</div>
+      <img
+        src={props.dailyData.condition.icon_url}
+        alt={props.dailyData.condition.description}
+      />
+
       <div>
         <span className="min">{maxTemp()}°</span>
         <span className="max">
