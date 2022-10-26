@@ -15,7 +15,14 @@ export default function ForecastDay(props) {
     let date = new Date(props.dailyData.time * 1000);
     let day = date.getDay();
     let days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+
     return days[day];
+
+    //if (days === 7) {
+    //  return days[day];
+    //} else {
+    //return days[day + 1];
+    //}
   }
 
   return (
