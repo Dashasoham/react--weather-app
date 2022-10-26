@@ -2,11 +2,12 @@ import React from 'react';
 import CurrentDate from './CurrentDate';
 import Icon from './Icon';
 import Degrees from './Degrees';
+import 'animate.css';
 
 export default function AppInfo(props) {
   return (
     <div className="container">
-      <h2 className="cityDisplay">
+      <h2 className="cityDisplay ">
         {props.data.city},<span className="country">{props.data.country}</span>
       </h2>
       <div className="row">

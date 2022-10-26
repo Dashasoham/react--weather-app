@@ -3,6 +3,7 @@ import AppInfo from './AppInfo';
 import Forecast from './Forecast';
 import axios from 'axios';
 import './Weather.css';
+import 'animate.css';
 
 export default function Weather(props) {
   let [weather, setWeather] = useState(false);

@@ -1,4 +1,5 @@
 import React from 'react';
+import Icon from './Icon';
 
 export default function ForecastDay(props) {
   function maxTemp() {
@@ -17,12 +18,6 @@ export default function ForecastDay(props) {
     let days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 
     return days[day];
-
-    //if (days === 7) {
-    //  return days[day];
-    //} else {
-    //return days[day + 1];
-    //}
   }
 
   return (

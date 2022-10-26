@@ -41,9 +41,7 @@
 .Weather canvas {
   margin: 10px auto;
 }
-.Weather .cityDisplay {
-  padding: 15px 0px;
-}
+
 .Weather .country {
   font-size: 16px;
   position: relative;
