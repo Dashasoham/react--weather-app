@@ -25,6 +25,8 @@ export default function ForecastDay(props) {
       <img
         src={props.dailyData.condition.icon_url}
         alt={props.dailyData.condition.description}
+        width={80}
+        height={80}
       />
 
       <div>

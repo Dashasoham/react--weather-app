@@ -3,7 +3,6 @@ import AppInfo from './AppInfo';
 import Forecast from './Forecast';
 import axios from 'axios';
 import './Weather.css';
-import 'animate.css';
 
 export default function Weather(props) {
   let [weather, setWeather] = useState(false);
@@ -13,22 +12,23 @@ export default function Weather(props) {
   function handleCity(response) {
     setLoaded(true);
     setWeather({
-      temperature: response.data.main.temp,
-      description: response.data.weather[0].description,
-      humidity: response.data.main.humidity,
-      wind: response.data.wind.speed,
-      date: new Date(response.data.dt * 1000),
-      icon: response.data.weather[0].icon,
-      city: response.data.name,
-      country: response.data.sys.country,
-      coordinates: response.data.coord,
+      temperature: response.data.daily[0].temperature.day,
+      description: response.data.daily[0].condition.description,
+      humidity: response.data.daily[0].temperature.humidity,
+      wind: response.data.daily[0].wind.speed,
+      date: new Date(response.data.daily[0].time * 1000),
+      icon: response.data.daily[0].condition.icon_url,
+      city: response.data.city,
+      country: response.data.country,
+      coordinates: response.data.coordinates,
     });
     console.log(response.data);
   }
 
   function search() {
-    let apiKey = '7d2f7439094688bc9a2723b3273f8711';
-    let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+    let apiKey = '14c3a03f2d1f08f51dfob8945097tf22';
+
+    let url = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}`;
     axios.get(url).then(handleCity);
   }
 
@@ -65,6 +65,11 @@ export default function Weather(props) {
   if (loaded) {
     return (
       <div className="Weather">
+        <div class="box">
+          <div class="wave -one"></div>
+          <div class="wave -two"></div>
+          <div class="wave -three"></div>
+        </div>
         {form}
         <AppInfo data={weather} />
         <Forecast forecast={weather} />

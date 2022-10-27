@@ -37,21 +37,91 @@
 .Weather .units .active {
   color: #47a2bb;
 }
-
-.Weather canvas {
-  margin: 10px auto;
+.currentDataRow {
+  margin-bottom: 50px;
 }
-
+.Weather img {
+  margin-top: -10px;
+}
 .Weather .country {
   font-size: 16px;
   position: relative;
   top: -10px;
 }
+.cityDisplay {
+  margin-bottom: 40px;
+  animation: blink 5s infinite;
+}
+@keyframes blink {
+  50% {
+    color: #47a2bb;
+  }
+}
 
 .Weather .date {
   text-transform: uppercase;
+  border: 1px solid #47a2bb;
 }
 .Weather .description {
   padding-top: 10px;
   font-size: 15px;
+}
+
+.Weather.icon img {
+  margin-top: -15px;
+}
+.Weather.currentDataRow {
+  margin-bottom: 10px;
+  margin-top: 25px;
+}
+
+.Weather.cityDisplay {
+  margin-bottom: 40px;
+  animation: blink 5s infinite;
+}
+@keyframes blink {
+  50% {
+    color: #47a2bb;
+  }
+}
+.box {
+  position: fixed;
+  top: 0;
+  transform: rotate(80deg);
+  left: 0;
+}
+
+.wave {
+  position: absolute;
+  opacity: 0.4;
+  width: 1500px;
+  height: 1300px;
+  margin-left: -150px;
+  margin-top: -250px;
+  border-radius: 43%;
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  from {
+    transform: rotate(360deg);
+  }
+}
+.wave.-one {
+  animation: rotate 8000ms infinite linear;
+  opacity: 0.1;
+  background: #0af;
+}
+
+.wave.-two {
+  animation: rotate 7000ms infinite linear;
+  opacity: 0.1;
+  background: black;
+}
+
+.wave.-three {
+  animation: rotate 10000ms infinite linear;
+  background-color: #47a2bb;
+  opacity: 0.2;
 }

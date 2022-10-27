@@ -1,8 +1,6 @@
 import React from 'react';
 import CurrentDate from './CurrentDate';
-import Icon from './Icon';
 import Degrees from './Degrees';
-import 'animate.css';
 
 export default function AppInfo(props) {
   return (
@@ -10,9 +8,10 @@ export default function AppInfo(props) {
       <h2 className="cityDisplay ">
         {props.data.city},<span className="country">{props.data.country}</span>
       </h2>
-      <div className="row">
+      <div className="currentDataRow row">
         <div className=" icon col-2">
-          <Icon code={props.data.icon} size={52} />
+          {' '}
+          <img src={props.data.icon} alt={props.data.description} />
         </div>
         <div className="col-3">
           {' '}
@@ -27,7 +26,7 @@ export default function AppInfo(props) {
         <div className="col-1"></div>
         <div className="col-3">
           <div className="date">
-            <CurrentDate date={props.data.date} />
+            <CurrentDate />
           </div>
           <div className="description text-capitalize">
             {' '}
