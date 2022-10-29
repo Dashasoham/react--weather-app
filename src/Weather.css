@@ -40,6 +40,20 @@
 .currentDataRow {
   margin-bottom: 50px;
 }
+
+@media (max-width: 539px) {
+  .currentDataRow .hello {
+    width: fit-content;
+  }
+  .currentDataRow .date {
+    margin-left: 120px;
+    margin-top: -40px;
+  }
+  .Weather .btn {
+    width: 77px !important;
+    margin-left: -20px !important;
+  }
+}
 .Weather img {
   margin-top: -10px;
 }

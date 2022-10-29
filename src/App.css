@@ -12,3 +12,10 @@
 .App a:hover {
   color: black;
 }
+@media (max-width: 414px) {
+  .App {
+    text-align: center;
+    width: 300px;
+    margin: 20px auto;
+  }
+}
