@@ -28,7 +28,7 @@ export default function AppInfo(props) {
           <div className="date">
             <CurrentDate />
           </div>
-          <div className="description text-capitalize hola">
+          <div className="description text-capitalize ">
             {' '}
             {props.data.description}
           </div>

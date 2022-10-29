@@ -13,14 +13,15 @@ root.render(
       <div class="wave -three"></div>
     </div>
     <React.StrictMode>
-      <div class="bird-container bird-container--one">
-        <div class="bird bird--one"></div>{' '}
+      <div class="container">
+        <div class="bird-container bird-container--one">
+          <div class="bird bird--one"></div>{' '}
+        </div>
+        <div class="bird-container bird-container--two">
+          <div class="bird bird--two"></div>
+        </div>
+        <App />{' '}
       </div>
-      <div class="bird-container bird-container--two">
-        <div class="bird bird--two"></div>
-      </div>
-
-      <App />
     </React.StrictMode>
   </div>
 );
