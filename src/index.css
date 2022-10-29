@@ -52,6 +52,7 @@ body {
   .container {
     position: relative;
     overflow: hidden;
+    max-width: 3000px;
   }
   .bird {
     background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/174479/bird-cells-new.svg);
@@ -77,7 +78,7 @@ body {
 
   .bird-container {
     position: absolute;
-
+    overflow: visible;
     top: 20%;
     left: -10%;
     transform: scale(0) translateX(-10vw);
