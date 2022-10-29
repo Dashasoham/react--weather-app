@@ -14,7 +14,10 @@ root.render(
     </div>
     <React.StrictMode>
       <div class="bird-container bird-container--one">
-        <div class="bird bird--one"></div>
+        <div class="bird bird--one"></div>{' '}
+      </div>
+      <div class="bird-container bird-container--two">
+        <div class="bird bird--two"></div>
       </div>
 
       <App />

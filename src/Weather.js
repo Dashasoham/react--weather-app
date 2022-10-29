@@ -65,11 +65,7 @@ export default function Weather(props) {
   if (loaded) {
     return (
       <div className="Weather">
-        <div class="box">
-          <div class="wave -one"></div>
-          <div class="wave -two"></div>
-          <div class="wave -three"></div>
-        </div>
+       
         {form}
         <AppInfo data={weather} />
         <Forecast forecast={weather} />

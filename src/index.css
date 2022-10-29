@@ -1,13 +1,15 @@
 body {
-  background-size: 1400px 700px;
-
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
   background-image: url('https://images.unsplash.com/photo-1505064750047-f810f700e6d3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80');
 }
 .box {
   position: fixed;
+  bottom: 0;
+  transform: rotate(50deg);
+  right: 0;
   top: 0;
-  transform: rotate(80deg);
-  left: 0;
 }
 
 .wave {
@@ -61,6 +63,10 @@ body {
   animation-duration: 1s;
   animation-delay: -0.5s;
 }
+.bird--two {
+  animation-duration: 0.9s;
+  animation-delay: -0.75s;
+}
 
 .bird-container {
   position: absolute;
@@ -77,6 +83,10 @@ body {
 .bird-container--one {
   animation-duration: 15s;
   animation-delay: 0;
+}
+.bird-container--two {
+  animation-duration: 16s;
+  animation-delay: 1s;
 }
 
 @keyframes fly-cycle {

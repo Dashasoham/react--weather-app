@@ -4,3 +4,11 @@
   margin: 20px auto;
   font-family: Geneva, Verdana, sans-serif;
 }
+.App a {
+  text-decoration: none;
+  color: #345560;
+  font-family: Geneva, Verdana, sans-serif;
+}
+.App a:hover {
+  color: black;
+}
