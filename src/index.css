@@ -4,127 +4,129 @@ body {
   background-attachment: fixed;
   background-image: url('https://images.unsplash.com/photo-1505064750047-f810f700e6d3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80');
 }
-.box {
-  position: fixed;
-  bottom: 0;
-  transform: rotate(50deg);
-  right: 0;
-  top: 0;
-}
 
-.wave {
-  position: absolute;
-  opacity: 0.4;
-  width: 1500px;
-  height: 1300px;
-  margin-left: -150px;
-  margin-top: -250px;
-  border-radius: 43%;
-}
-@keyframes rotate {
-  from {
-    transform: rotate(0deg);
-  }
-  from {
-    transform: rotate(360deg);
-  }
-}
-.wave.-one {
-  animation: rotate 8000ms infinite linear;
-  opacity: 0.1;
-  background: #0af;
-}
-
-.wave.-two {
-  animation: rotate 7000ms infinite linear;
-  opacity: 0.1;
-  background: black;
-}
-
-.wave.-three {
-  animation: rotate 10000ms infinite linear;
-  background-color: #47a2bb;
-  opacity: 0.2;
-}
-
-.bird {
-  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/174479/bird-cells-new.svg);
-  background-size: auto 100%;
-  width: 88px;
-  height: 125px;
-  will-change: background-position;
-
-  animation-name: fly-cycle;
-  animation-timing-function: steps(10);
-  animation-iteration-count: infinite;
-}
-
-.bird--one {
-  animation-duration: 1s;
-  animation-delay: -0.5s;
-}
-.bird--two {
-  animation-duration: 0.9s;
-  animation-delay: -0.75s;
-}
-
-.bird-container {
-  position: absolute;
-  top: 20%;
-  left: -10%;
-  transform: scale(0) translateX(-10vw);
-  will-change: transform;
-
-  animation-name: fly-right-one;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-}
-
-.bird-container--one {
-  animation-duration: 15s;
-  animation-delay: 0;
-}
-.bird-container--two {
-  animation-duration: 16s;
-  animation-delay: 1s;
-}
-
-@keyframes fly-cycle {
-  100% {
-    background-position: -900px 0;
-  }
-}
-
-@keyframes fly-right-one {
-  0% {
-    transform: scale(0.3) translateX(-10vw);
+@media (min-width: 900px) {
+  .box {
+    position: fixed;
+    bottom: 0;
+    transform: rotate(50deg);
+    right: 0;
+    top: 0;
   }
 
-  10% {
-    transform: translateY(2vh) translateX(10vw) scale(0.4);
+  .wave {
+    position: absolute;
+    opacity: 0.4;
+    width: 1500px;
+    height: 1300px;
+    margin-left: -150px;
+    margin-top: -250px;
+    border-radius: 43%;
+  }
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    from {
+      transform: rotate(360deg);
+    }
+  }
+  .wave.-one {
+    animation: rotate 8000ms infinite linear;
+    opacity: 0.1;
+    background: #0af;
   }
 
-  20% {
-    transform: translateY(0vh) translateX(30vw) scale(0.5);
+  .wave.-two {
+    animation: rotate 7000ms infinite linear;
+    opacity: 0.1;
+    background: black;
   }
 
-  30% {
-    transform: translateY(4vh) translateX(50vw) scale(0.6);
+  .wave.-three {
+    animation: rotate 10000ms infinite linear;
+    background-color: #47a2bb;
+    opacity: 0.2;
+  }
+  .bird {
+    background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/174479/bird-cells-new.svg);
+    background-size: auto 100%;
+    width: 88px;
+    height: 125px;
+    will-change: background-position;
+
+    animation-name: fly-cycle;
+    animation-timing-function: steps(10);
+    animation-iteration-count: infinite;
   }
 
-  40% {
-    transform: translateY(2vh) translateX(70vw) scale(0.6);
+  .bird--one {
+    animation-duration: 1s;
+    animation-delay: -0.5s;
+  }
+  .bird--two {
+    animation-duration: 0.9s;
+    animation-delay: -0.75s;
   }
 
-  50% {
-    transform: translateY(0vh) translateX(90vw) scale(0.6);
+  .bird-container {
+    position: absolute;
+    top: 20%;
+    left: -10%;
+    transform: scale(0) translateX(-10vw);
+    will-change: transform;
+
+    animation-name: fly-right-one;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
   }
 
-  60% {
-    transform: translateY(0vh) translateX(110vw) scale(0.6);
+  .bird-container--one {
+    animation-duration: 15s;
+    animation-delay: 0;
+  }
+  .bird-container--two {
+    animation-duration: 16s;
+    animation-delay: 1s;
   }
 
-  100% {
-    transform: translateY(0vh) translateX(110vw) scale(0.6);
+  @keyframes fly-cycle {
+    100% {
+      background-position: -900px 0;
+    }
+  }
+
+  @keyframes fly-right-one {
+    0% {
+      transform: scale(0.3) translateX(-10vw);
+    }
+
+    10% {
+      transform: translateY(2vh) translateX(10vw) scale(0.4);
+    }
+
+    20% {
+      transform: translateY(0vh) translateX(30vw) scale(0.5);
+    }
+
+    30% {
+      transform: translateY(4vh) translateX(50vw) scale(0.6);
+    }
+
+    40% {
+      transform: translateY(2vh) translateX(70vw) scale(0.6);
+    }
+
+    50% {
+      transform: translateY(0vh) translateX(90vw) scale(0.6);
+    }
+
+    60% {
+      transform: translateY(0vh) translateX(110vw) scale(0.6);
+    }
+
+    100% {
+      transform: translateY(0vh) translateX(110vw) scale(0.6);
+    }
   }
 }
