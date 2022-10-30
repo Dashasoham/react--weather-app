@@ -65,7 +65,6 @@ export default function Weather(props) {
   if (loaded) {
     return (
       <div className="Weather">
-       
         {form}
         <AppInfo data={weather} />
         <Forecast forecast={weather} />

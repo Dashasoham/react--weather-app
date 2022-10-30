@@ -10,13 +10,13 @@ function App() {
         <Weather defaultCity="Kyiv" />
       </header>
       <footer>
+        Open-source code by{' '}
         <a
           href="https://github.com/Dashasoham/react--weather-app"
           target="blank"
         >
-          Open-source code
-        </a>{' '}
-        by Daria Korniienko
+          Daria Korniienko{' '}
+        </a>
       </footer>
     </div>
   );
